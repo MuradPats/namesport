@@ -1,9 +1,11 @@
 $(document).ready(function () {
     var uuid = null;
     var answer = null;
+    var sid = null;
     function gotQuestion(e) {
         uuid = e.data[0].uuid;
-        $('img').attr('src', 'https://ideelabor.ee/api/namesport/v1/image/' + uuid);
+        sid = e.data[0].sid;
+        $('img').attr('src', 'https://ideelabor.ee/api/namesport/v1/image/' + uuid + '?SID=' + sid);
         //Generate table
         console.log("got question");
         $('#answers').empty();
@@ -37,13 +39,14 @@ $(document).ready(function () {
         setTimeout(function () {
             $('#overlay').hide();
             $('#score span').text(0);
+            alert('Starting new game');
             startGame();
         }, 2000)
 
     }
-    function nextQuestion() {
+    function nextQuestion(sid) {
         $.ajax({
-            url: "https://ideelabor.ee/api/namesport/v1/question?hint=true",
+            url: "https://ideelabor.ee/api/namesport/v1/question?hint=true&SID="+sid,
             success: function (e) {
                 console.log(e);
                 if (e.status === "ERROR") {
@@ -54,23 +57,23 @@ $(document).ready(function () {
             }
         });
     }
-    function answerQuestion(name, uuid) {
+    function answerQuestion(name, uuid, sid) {
         $.ajax({
-            url: "https://ideelabor.ee/api/namesport/v1/answer/" + name + "/" + uuid,
+            url: "https://ideelabor.ee/api/namesport/v1/answer/" + name + "/" + uuid + "?SID=" + sid,
             success: function (e) {
                 if (e.status === "ERROR") {
                     handleError();
                 } else {
                     console.log(e);
                     $('#score span').text(e.data[0].score);
-                    nextQuestion();
+                    nextQuestion(sid);
                 }
 
             }
         })
     }
     $('button').click(function () {
-        answerQuestion(answer, uuid);
+        answerQuestion(answer, uuid, sid);
     })
     //startGame();
     nextQuestion();
