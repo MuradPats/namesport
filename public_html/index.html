@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/libs/jquery/jquery.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <style type="text/css">
+            li{
+                margin:2px;
+                border:1px solid black;
+            }
+            .selected{
+                border:2px solid green;
+            }
+            img{
+                max-width: 300px;
+                display: inline-block;
+            }
+            #question{
+                margin: auto;
+                display: block;
+                width: 29%;
+            }
+            #answers{
+                display: inline-block;
+                width: 200px;
+                margin: 0 0 0 0;
+            }
+            button{
+                height: 30px;
+                margin: auto;
+                display: block;
+                margin-top: 50px;
+            }
+            #score{
+                text-align: center;
+            }
+            #overlay{
+                left:0;
+                top:0;
+                bottom:0;
+                right:0;
+                background-color: rgba(1,1,1,0.5);
+                position:absolute;
+                display:none;
+            }
+
+        </style>
+        <div id="overlay">
+
+        </div>
+        <h3 id="score"><span>0</span></h3>
+        <div id="container">
+            <div id="question">
+                <img>
+                <ul id ="answers">
+
+                </ul>
+            </div>
+            <button id="submit">Answer</button>
+        </div>
+    </body>
+</html>
