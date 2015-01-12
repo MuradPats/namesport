@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-    $('#submit').click(function () {
+    /*$('#submit').click(function () {
         answerQuestion(answer, uuid, sid);
-    });
+    });*/
     $('#game_container').hide();
     $('#start_game').click(function () {
         startGame();
@@ -44,6 +44,7 @@ function gotQuestion(e) {
             target.addClass("selected");
             console.log("selected" + name);
             answer = name;
+            answerQuestion(answer, uuid, sid);
         });
         if (name === e.data[0].hint) {
             li.addClass("selected");
