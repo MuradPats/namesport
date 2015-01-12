@@ -41,8 +41,11 @@ and open the template in the editor.
                 display: block;
                 margin-top: 50px;
             }
-            #score{
+            #score,#time{
                 text-align: center;
+            }
+            #time{
+                color:#f53045;
             }
             #overlay{
                 left:0;
@@ -53,20 +56,42 @@ and open the template in the editor.
                 position:absolute;
                 display:none;
             }
+            #start_game{
+                margin:auto;
+                display:block;
+            }
+
+            html,body {
+                height:100%;
+                margin:0px;
+            }
+            #start_game{
+                margin-left: 50%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+            
 
         </style>
-        <div id="overlay">
-
-        </div>
-        <h3 id="score"><span>0</span></h3>
+        <div id="overlay"></div>
         <div id="container">
-            <div id="question">
-                <img>
-                <ul id ="answers">
+            <button id="start_game">Start game</button>
+            <div id="game_container">
+                <h2 id="time"></h2>
+                <h3 id="score"><span>0</span></h3>
+                <div>
+                    <div id="question">
+                        <img>
+                        <ul id ="answers">
 
-                </ul>
+                        </ul>
+                    </div>
+                    <button id="submit">Answer</button>
+                </div>
             </div>
-            <button id="submit">Answer</button>
         </div>
     </body>
 </html>
