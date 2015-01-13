@@ -1,100 +1,62 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>NameSport - The Ultimate Sports Guessing Game</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="author" content="Taavi Jaanson | Ideelabor OÜ | taavi@ideelabor.ee">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        
+        <!-- Javascript -->
         <script src="js/libs/jquery/jquery.js"></script>
         <script src="js/main.js"></script>
     </head>
     <body>
-        <style type="text/css">
-            li{
-                margin:2px;
-                border:1px solid black;
-            }
-            .selected{
-                border:2px solid green;
-            }
-            img{
-                max-width: 300px;
-                display: inline-block;
-            }
-            #question{
-                margin: auto;
-                display: block;
-                width: 29%;
-            }
-            #answers{
-                display: inline-block;
-                width: 200px;
-                margin: 0 0 0 0;
-            }
-            button{
-                height: 30px;
-                margin: auto;
-                display: block;
-                margin-top: 50px;
-            }
-            #score,#time{
-                text-align: center;
-            }
-            #time{
-                color:#f53045;
-            }
-            #overlay{
-                left:0;
-                top:0;
-                bottom:0;
-                right:0;
-                background-color: rgba(1,1,1,0.5);
-                position:absolute;
-                display:none;
-            }
-            #start_game{
-                margin:auto;
-                display:block;
-            }
-
-            html,body {
-                height:100%;
-                margin:0px;
-            }
-            #start_game{
-                margin-left: 50%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-            }
-            #submit{
-                display:none;
-            }
-            
-
-        </style>
         <div id="overlay"></div>
-        <div id="container">
-            <button id="start_game">Start game</button>
-            <div id="game_container">
-                <h2 id="time"></h2>
-                <h3 id="score"><span>0</span></h3>
-                <div>
-                    <div id="question">
-                        <img>
-                        <ul id ="answers">
-
-                        </ul>
+        
+        <div class="parent-center-center-1">
+            <div class="parent-center-center-2">
+                <div class="parent-center-center-3">
+                    
+                    <div class="container-fluid">
+                        <div class="row">
+                        
+                            <div id="start_game_container" class="col-lg-2 col-lg-offset-5 col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                                <button type="button" class="btn btn-primary btn-lg btn-block" id="start_game">Start game</button>
+                            </div>
+                            
+                            <div id="game_container" class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+                                <h2 id="time"></h2>
+                                <h3 id="score"><span>0</span></h3>
+                                <div id="question">
+                                    <img>
+                                    <ul id="answers" class="list-unstyled"></ul>
+                                </div>
+                                <button id="submit">Answer</button>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <button id="submit">Answer</button>
+                    
                 </div>
             </div>
         </div>
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-58250000-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
     </body>
 </html>
