@@ -1,8 +1,34 @@
-$(document).ready(function () {
+var uuid = null,
+    answer = null,
+    sid = null,
+    time = -1,
+    interval,
+    newQuestionTimer;
+    
+//DEBUG && cheat
+var debug = true,
+    hint = false;
 
-    /*$('#submit').click(function () {
-        answerQuestion(answer, uuid, sid);
-    });*/
+$(document).ready(function () {
+    
+    $.ajax({
+        url: "https://ideelabor.ee/api/namesport/v1/session",
+        async: false,
+        success: function (e) {
+            if (debug === true) {
+                handleDebug(e, "session");
+            }
+            if (e.status === "ERROR") {
+                handleError(e);
+            } else {
+                sid = e.data[0].sid;
+            }
+        },
+        error: function (e) {
+            console.log(e);
+        }
+    });
+
     $('#game_container').hide();
     $('#start_game').click(function () {
         startGame();
@@ -10,15 +36,6 @@ $(document).ready(function () {
         $('#start_game_container').hide();
     });
 });
-
-var uuid = null;
-var answer = null;
-var sid = null;
-var time = -1;
-var interval;
-var newQuestionTimer;
-//DEBUG
-var hint = false;
 
 function setTime(t) {
     //TODO: make this use javascript Date object instead, for delta time etc.
@@ -70,6 +87,9 @@ function startGame() {
     $.ajax({
         url: "https://ideelabor.ee/api/namesport/v1/question/start",
         success: function (e) {
+            if (debug === true) {
+                handleDebug(e, "startGame");
+            }
             if (e.status === "ERROR") {
                 handleError(e);
             } else {
@@ -91,6 +111,11 @@ function handleError(e) {
         gameOver();
     }
 }
+function handleDebug(e,event) {
+    console.log("handleDebug");
+    $("#insert-json-here").html("<strong>" + event + "</strong><br />" + JSON.stringify(e));
+}
+
 function gameOver() {
     console.log("[IDLAB] gameOver");
     var submit = confirm("Game over, submit your score: "+$('#score span').text());
@@ -106,7 +131,9 @@ function nextQuestion(sid) {
     $.ajax({
         url: "https://ideelabor.ee/api/namesport/v1/question?hint=true&SID=" + sid,
         success: function (e) {
-            console.log(e);
+            if (debug === true) {
+                handleDebug(e, "nextQuestion");
+            }
             if (e.status === "ERROR") {
                 handleError(e);
             } else {
@@ -119,7 +146,9 @@ function answerQuestion(name, uuid, sid) {
     $.ajax({
         url: "https://ideelabor.ee/api/namesport/v1/answer/" + name + "/" + uuid + "?SID=" + sid,
         success: function (e) {
-            console.log(e.status);
+            if (debug === true) {
+                handleDebug(e, "answerQuestion");
+            }
             if (e.status === "ERROR") {
                 handleError(e);
             } else {

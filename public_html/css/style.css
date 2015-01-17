@@ -74,3 +74,11 @@ img{
     max-width: 300px;
     display: inline-block;
 }
+
+#insert-json-here {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    text-align: right;
+}
