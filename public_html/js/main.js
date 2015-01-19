@@ -1,3 +1,6 @@
+//TODO:
+// * if game ends without player giving an answer - submit "wrong" answer; so the right one gets displayed
+
 var uuid = null,
     answer = null,
     sid = null,
@@ -39,7 +42,7 @@ $(document).ready(function () {
 
 function setTime(t) {
     //TODO: make this use javascript Date object instead, for delta time etc.
-    console.log("[IDLAB] setTIme");
+    //console.log("[IDLAB] setTime");
     time = t;
     if (t < 0) {
         time = 0;
@@ -83,9 +86,9 @@ function gotQuestion(e) {
     });
 }
 function startGame() {
-    console.log("[IDLAB] startGame");
+    console.log("[IDLAB] startGame with SID: " + sid );
     $.ajax({
-        url: "https://ideelabor.ee/api/namesport/v1/question/start",
+        url: "https://ideelabor.ee/api/namesport/v1/question/start?SID="+sid,
         success: function (e) {
             if (debug === true) {
                 handleDebug(e, "startGame");
@@ -143,6 +146,7 @@ function nextQuestion(sid) {
     });
 }
 function answerQuestion(name, uuid, sid) {
+    console.log("SID is "+ sid);
     $.ajax({
         url: "https://ideelabor.ee/api/namesport/v1/answer/" + name + "/" + uuid + "?SID=" + sid,
         success: function (e) {
