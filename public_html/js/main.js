@@ -10,7 +10,7 @@ var uuid = null,
     
 //DEBUG && cheat
 var debug = true,
-    hint = false;
+    hint = true;
 
 $(document).ready(function () {
     
