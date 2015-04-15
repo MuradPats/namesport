@@ -18,8 +18,8 @@ require("functions.inc");
 printHeader();
 
 echo "<span class='lrg'>".$_SESSION["email"]." ";
-foreach($pages as $p) if($p != "kliendid") echo "<a href='/soleil/$p'>$p</a> ";
-echo "<a href='?login=logout'>logi välja</a></span><div id='intra'>";
+foreach($pages as $p) echo "<a href='/matrix/$p'>$p</a> ";
+echo "<a href='/matrix/?login=logout'>logi välja</a></span><div id='intra'>";
 
 if(is_file("$page.inc")) require("$page.inc");
 
