@@ -21,7 +21,7 @@ echo "<span class='lrg'>".$_SESSION["email"]." ";
 foreach($pages as $p) echo "<a href='/matrix/$p'>$p</a> ";
 echo "<a href='/matrix/?login=logout'>logi välja</a></span><div id='intra'>";
 
-if(is_file("$page.inc")) require("$page.inc");
+if(is_file($page.".php")) require($page.".php");
 
 echo "</div>";
 
