@@ -10,16 +10,30 @@
     outline: none;
 }
 
+.strong {
+    font-weight: bold;
+}
+
+.clear  {
+    clear: both;
+}
+
 /* Helper classes */
 
+.voffset0 { margin-top: 0; }
 .voffset20 { margin-top: 20px;}
 .voffset3 { margin-top: 15px; }
 .voffset4 { margin-top: 30px; }
 .voffset5 { margin-top: 40px; }
+
+.voffsete0 { margin-top: 0; margin-bottom: 0; }
 .voffsete1 { margin-top: 1em; margin-bottom: 1em; }
 .voffsete2 { margin-top: 2em; margin-bottom: 2em; }
 .voffsete3 { margin-top: 3em; margin-bottom: 3em; }
 .voffsete5 { margin-top: 5em; margin-bottom: 5em; }
+
+.color-red { color: #ff0000; }
+.color-green { color: #00b300; }
 
 /* Login-screen */
 
@@ -93,4 +107,26 @@ body.login .parent-center-center-3 {
     background: url('../assets/img/White-signin-Google-press-44dp.png');
 }
 
+/* Table */
+
+td.shrink  {
+    width: 1%;
+}
+
+/* Pager */
+
+.pager li>a, 
+.pager li>span {
+    border-radius: 4px;
+}
+
+.pager .disabled>a {
+    opacity: .6;
+}
+
+/* Baller images */
+
+.baller-image .caption p {
+    word-break: break-word;
+}
 

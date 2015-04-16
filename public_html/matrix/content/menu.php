@@ -14,10 +14,10 @@
         <div class="collapse navbar-collapse" id="namesport-menu">
             <ul class="nav navbar-nav">
                 <?php
-                foreach ($pages AS $mp) {
+                foreach ($pages AS $mpn => $mpl) {
                     echo "
-                        <li" . ($mp == $page ? " class='active'" : "") . ">
-                            <a href='" . $baseURL . $mp . "/'>" . $mp . "</a>
+                        <li" . ($mpl == $page ? " class='active'" : "") . ">
+                            <a href='" . $baseURL . $mpl . "/'>" . $mpn . "</a>
                         </li>";
                 }
                 ?>

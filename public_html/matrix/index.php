@@ -12,6 +12,9 @@ require_once("helpers/db.php");
 //Helper functions
 require_once("helpers/functions.php");
 
+//Handle forms
+require_once("helpers/forms.php");
+
 //Pages
 require_once("helpers/pages.php");
 

@@ -7,10 +7,12 @@ $baseURL = "/matrix/";
 $fullURL = "http://namesport.co.uk/matrix/";
 
 //Debug - true/false
-$debug = false;
+$debug = true;
 
 //Pages available
-$pages = array("ballers", "images");
+$pages = array(
+    "Pallurid" => "ballers"
+);
 
 //Allow auth list
 $allowAuth = array("mart.randala@gmail.com", "regdyn@gmail.com");
