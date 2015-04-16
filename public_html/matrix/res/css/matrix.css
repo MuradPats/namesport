@@ -75,6 +75,8 @@ body.login .parent-center-center-3 {
 
 .login-button {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .login-button-google {
