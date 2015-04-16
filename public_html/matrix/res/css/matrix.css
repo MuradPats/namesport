@@ -1,0 +1,94 @@
+/* 
+    Created on : 16.04.2015, 8:42:24
+    Author     : Taavi Jaanson <taavi@ideelabor.ee>
+*/
+
+/* Core */
+
+.btn {
+    outline: 0;
+    outline: none;
+}
+
+/* Helper classes */
+
+.voffset20 { margin-top: 20px;}
+.voffset3 { margin-top: 15px; }
+.voffset4 { margin-top: 30px; }
+.voffset5 { margin-top: 40px; }
+.voffsete1 { margin-top: 1em; margin-bottom: 1em; }
+.voffsete2 { margin-top: 2em; margin-bottom: 2em; }
+.voffsete3 { margin-top: 3em; margin-bottom: 3em; }
+.voffsete5 { margin-top: 5em; margin-bottom: 5em; }
+
+/* Login-screen */
+
+html.login,
+body.login {
+    height: 100%;
+}
+
+body.login {
+    color: #fff;
+    background-color: #0a1839;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Sticky footer */
+
+body.login #wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -30px;
+}
+
+body.login #footer {
+    height: 30px;
+    z-index: 9;
+    position: relative;
+}
+
+/* Full page center */
+
+body.login .parent-center-center-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+body.login .parent-center-center-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: table;
+    text-align: center;
+}
+
+body.login .parent-center-center-3 {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Login buttons */
+
+.login-button {
+    display: block;
+}
+
+.login-button-google {
+    width: 161px;
+    height: 54px;
+    background: url('../assets/img/White-signin-Google-base-44dp.png');
+}
+
+.login-button-google:hover {
+    background: url('../assets/img/White-signin-Google-hover-44dp.png');
+}
+
+.login-button-google:focus {
+    background: url('../assets/img/White-signin-Google-press-44dp.png');
+}
+
+
