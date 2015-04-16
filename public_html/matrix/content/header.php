@@ -8,8 +8,10 @@
 <!-- CSS -->
 <link rel="stylesheet" type="text/css" href="<?php echo $baseURL; ?>res/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $baseURL; ?>res/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $baseURL; ?>res/css/imgareaselect-animated.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo $baseURL; ?>res/css/matrix.css" />
 
 <!-- JS -->
 <script src="<?php echo $baseURL; ?>res/js/jquery-2.1.3.min.js"></script>
 <script src="<?php echo $baseURL; ?>res/js/bootstrap.min.js"></script>
+<script src="<?php echo $baseURL; ?>res/js/jquery.imgareaselect.js"></script>

@@ -3,6 +3,6 @@
 if (!empty($UE)) {
     $page = $UE[1];
 } else {
-    $page = $pages[0];
+    $page = array_values($pages)[0];
 }
 ?>

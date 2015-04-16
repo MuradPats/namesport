@@ -7,7 +7,7 @@ $baseURL = "/matrix/";
 $fullURL = "http://namesport.co.uk/matrix/";
 
 //Debug - true/false
-$debug = true;
+$debug = false;
 
 //Pages available
 $pages = array(
@@ -23,6 +23,10 @@ define('DB_USER', 'namesport');
 define('DB_PASSWORD', 'c542885238');
 define('DB_HOST', 'localhost');
 define('DB_CHARSET', 'utf8');
+
+//Picture locations
+$orig_img_url = "images/";
+$crop_img_url = "cropped/";
 
 /* * *** DO NOT EDIT **** */
 
