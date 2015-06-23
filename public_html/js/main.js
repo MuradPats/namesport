@@ -9,8 +9,8 @@ var uuid = null,
     newQuestionTimer;
     
 //DEBUG && cheat
-var debug = true,
-    hint = true;
+var debug = false,
+    hint = false;
 
 $(document).ready(function () {
     

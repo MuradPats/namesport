@@ -66,8 +66,10 @@ html,body {
     display: inline-block;
 }
 
-#question img {
+#question>img {
     vertical-align: top;
+    width: 200px;
+    height: 200px;
 }
 
 img{
@@ -81,4 +83,8 @@ img{
     right: 20px;
     left: 20px;
     text-align: right;
+}
+
+#answers .btn {
+    padding: 4px 12px;
 }

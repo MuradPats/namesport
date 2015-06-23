@@ -108,7 +108,8 @@ $PAGE_SIZE = 25;
 $content = "";
 
 //SQL
-$aQuery = "SELECT b.id, b.cms_alias, b.name, b.rank, SUM(IF(p.review IS NULL, 1, 0)) AS nreviewed, SUM(IF(p.review IS NOT NULL, 1, 0)) AS reviewed FROM baller b LEFT JOIN ballerpicture p ON b.id=p.baller_id GROUP BY b.id ORDER BY nreviewed DESC, -b.rank DESC LIMIT " . ($pgn - 1) * $PAGE_SIZE . ", " . ($PAGE_SIZE + 1);
+//nreviewed DESC,
+$aQuery = "SELECT b.id, b.cms_alias, b.name, b.rank, SUM(IF(p.review IS NULL, 1, 0)) AS nreviewed, SUM(IF(p.review IS NOT NULL, 1, 0)) AS reviewed FROM baller b LEFT JOIN ballerpicture p ON b.id=p.baller_id WHERE b.rank > 0 GROUP BY b.id ORDER BY b.rank ASC LIMIT " . ($pgn - 1) * $PAGE_SIZE . ", " . ($PAGE_SIZE + 1);
 if ($debug) {
     echo "<pre>";
     echo $aQuery;
