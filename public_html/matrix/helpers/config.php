@@ -11,7 +11,8 @@ $debug = false;
 
 //Pages available
 $pages = array(
-    "Pallurid" => "ballers"
+    "Pallurid" => "ballers",
+    "Mängud" => "games"
 );
 
 //Allow auth list
