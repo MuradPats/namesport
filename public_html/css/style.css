@@ -1,3 +1,10 @@
+
+#bootstrap-playrow-div{
+	background-color: #000000;
+  border-radius: 15px;
+  opacity: 0.6;
+}
+
 #answers li {
     margin:2px;
     position: relative;
@@ -13,9 +20,15 @@
 
 #answers{
     display: inline-block;
-    width: 200px;
+    width: 250px;
     margin: 0 0 0 0;
+	
+	
+	background-color: #000000;
+	border-radius: 15px;
+	opacity: 0.6;
 }
+
 #score,#time{
     text-align: center;
 }
@@ -72,7 +85,21 @@ html,body {
     height: 200px;
 }
 
+li{
+	padding: 10px 0px 10px 0px;
+	font-size: 25px;
+	text-shadow: 2px 2px #000000;
+	font-family: Raleway;
+	
+}
+li a{
+	color: #ffffff;
+}
+
 img{
+	
+	border-radius: 12px;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.79);
     max-width: 300px;
     display: inline-block;
 }
@@ -88,3 +115,45 @@ img{
 #answers .btn {
     padding: 4px 12px;
 }
+.newbar {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: black;
+  list-style-type: none;
+}
+.newbar .newbar-brand {
+  font-weight: 700;
+}
+.newbar .newbar-brand:focus {
+  outline: none;
+}
+.newbar a {
+  color: white;
+}
+.newbar .nav li a {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.newbar .nav li.active {
+  outline: none;
+}
+.newbar .nav li.active a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 768px) {
+  .newbar {
+    padding: 50px 0px 50px 0px;
+    letter-spacing: 1px;
+	word-spacing: 10px;
+    background: transparent;
+    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  }
+}
+
+
